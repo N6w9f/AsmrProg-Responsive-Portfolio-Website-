@@ -1,0 +1,463 @@
+/* GlobalCss -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --margin: 46px 46px 0;
+  --padding: 46px;
+
+  --p-color: #777;
+  --W-color: #fff;
+  --O-color: #ffb73c;
+  --BK-color: #292b2f;
+  --foot-color: #1c1c1c;
+
+  --transition: 0.3s;
+}
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  background-color: #212528;
+}
+::selection {
+  background-color: var(--O-color);
+  color: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Poppins", sans-serif;
+
+  text-decoration: none;
+  list-style: none;
+}
+.container {
+  margin: auto auto;
+}
+.component {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 36px;
+  color: var(--O-color);
+  background-color: var(--BK-color);
+  border-radius: 8px;
+}
+
+/* Header ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 0;
+}
+header h2 {
+  color: var(--O-color);
+  font-weight: 800;
+}
+header nav ul {
+  display: flex;
+  gap: 24px;
+}
+header nav ul li a {
+  color: var(--W-color);
+  transition-duration: var(--transition);
+}
+header button,
+.about .holder .text button,
+.skills .holder .text button {
+  padding: 6px 30px;
+  border-radius: 8px;
+  background-color: var(--O-color);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition-duration: var(--transition);
+}
+
+header nav ul li a:hover {
+  color: var(--O-color);
+}
+header button:hover,
+.about .holder .text button:hover,
+.skills .holder .text button:hover {
+  background-color: #ffa100;
+  scale: 0.95;
+}
+
+/* Landing --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 16px;
+  color: var(--W-color);
+  text-align: center;
+}
+main h2 {
+  font-size: 28px;
+}
+main h2 span {
+  color: var(--O-color);
+  text-decoration-line: underline;
+}
+main h1 {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  font-size: 46px;
+}
+main p,
+.about .holder .text p,
+.skills .holder .text p {
+  font-size: 14px;
+  font-weight: 300;
+}
+main img {
+  height: 180px;
+  width: 180px;
+  margin-top: 80px;
+}
+
+/* Info -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 46px;
+}
+.info .card {
+  display: flex;
+  flex: 1;
+  min-width: 320px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--BK-color);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 8px 16px;
+  transition-duration: var(--transition);
+}
+.info .card .holder {
+  background-color: var(--W-color);
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: var(--transition);
+}
+.info .card .text {
+  color: var(--W-color);
+}
+.info .card .text h2 {
+  color: var(--O-color);
+}
+.info .card .holder i {
+  font-weight: 500;
+  font-size: 28px;
+}
+.info .card > i {
+  font-size: 22px;
+  color: var(--W-color);
+  transition-duration: var(--transition);
+}
+
+.info .card:hover {
+  outline: 0.1pt solid var(--O-color);
+  scale: 1.009;
+}
+.info .card:hover .holder {
+  background-color: var(--O-color);
+}
+.info .card:hover > i {
+  color: var(--O-color);
+}
+
+/* About ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.about,
+.skills,
+.work {
+  margin: var(--margin);
+}
+.about .holder {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.about .holder img {
+  height: 450px;
+}
+.about .holder .text {
+  min-width: 625px;
+}
+.about .holder .text,
+.skills .holder .text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: var(--W-color);
+}
+.about .holder .text h2 {
+  font-weight: 600;
+}
+.about .holder .text p {
+  color: var(--p-color);
+}
+.about .holder .text button,
+.skills .holder .text button {
+  width: fit-content;
+}
+
+/* Skills ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.skills .holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 100px;
+}
+.skills .holder .text {
+  min-width: 600px;
+}
+.skills .holder .text P {
+  color: var(--p-color);
+}
+
+.skills .holder .skill {
+  min-width: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.skills .holder .skill .card {
+  padding: 12px 16px;
+  background-color: var(--BK-color);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.skills .holder .skill .card i {
+  font-size: 36px;
+  color: var(--W-color);
+}
+
+/* Start a project ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.work {
+  padding: 34px 80px;
+  background-color: var(--O-color);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  translate: 0 50%;
+  gap: 22px;
+}
+.work h2 {
+  min-width: fit-content;
+}
+.work p {
+  text-align: center;
+}
+.work button {
+  padding: 8px 0;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 16px;
+  min-width: 150px;
+  transition-duration: var(--transition);
+  cursor: pointer;
+}
+.work button:hover {
+  scale: 0.95;
+}
+
+/* Footer ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+footer {
+  padding: calc(var(--padding) + 65px) var(--padding) var(--padding);
+  background-color: var(--foot-color);
+  color: var(--W-color);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 65px;
+}
+footer .line {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+footer .line:first-of-type h3 {
+  color: var(--O-color);
+}
+footer .line:last-of-type p {
+  color: var(--p-color);
+}
+footer .line:last-of-type form {
+  padding: 0 0 0 8px;
+  background-color: var(--BK-color);
+  border-radius: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .line:last-of-type form input {
+  background: transparent;
+  border: none;
+  color: white;
+}
+footer .line:last-of-type form input:focus {
+  outline: none;
+}
+footer .line:last-of-type form i {
+  padding: 12px;
+  color: black;
+  background-color: var(--O-color);
+  border-radius: 50%;
+}
+footer ul li a {
+  color: var(--p-color);
+  transition: var(--transition);
+}
+footer ul li a:hover {
+  color: var(--O-color);
+}
+
+/* Media ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* Min-Width */
+@media (min-width: 600px) {
+  .container {
+    width: 570px;
+  }
+  main {
+    height: calc(100vh - 107px);
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  main {
+    height: calc(100vh - 109px);
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* Max-Width */
+@media (max-width: 1199px) {
+  .about .holder img {
+    width: 275px;
+  }
+  .skills .holder {
+    flex-direction: column;
+  }
+  .skills .holder .skill {
+    max-width: 350px;
+  }
+  .skills .holder .text {
+    text-align: center;
+    align-items: center;
+    gap: 34px;
+  }
+}
+@media (max-width: 991px) {
+  .about .holder {
+    flex-direction: column;
+  }
+  .about .holder img {
+    align-self: start;
+  }
+  .about .holder .text {
+    min-width: 0;
+  }
+  .skills .holder .text {
+    min-width: 0;
+  }
+  .work h2 {
+    display: none;
+  }
+  .work p {
+    text-align: start;
+  }
+}
+@media (max-width: 767px) {
+  header button {
+    display: none;
+  }
+  header nav ul li a {
+    font-size: 16px;
+  }
+  .work {
+    flex-direction: column;
+    translate: 0 0;
+  }
+}
+@media (max-width: 599px) {
+  header {
+    padding: 16px 24px;
+    flex-direction: column;
+    gap: 16px;
+  }
+  header nav ul li a {
+    font-size: 14px;
+  }
+  main {
+    height: calc(100vh - 108px);
+  }
+  .skills .holder .skill {
+    min-width: 0;
+  }
+  .skills .holder .skill .card i {
+    font-size: 28px;
+  }
+}
+@media (max-width: 424px) {
+  .info,
+  .about,
+  .skills,
+  .work {
+    margin-right: 12px;
+    margin-left: 12px;
+  }
+  footer {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+  .landing {
+    scale: 0.9;
+  }
+}
+@media (max-width: 359px) {
+  header > h2 {
+    font-size: 22px;
+  }
+  header nav ul li a {
+    font-size: 12px;
+  }
+  .info .card {
+    text-align: center;
+    flex-direction: column;
+    min-width: 130px;
+  }
+  .info .card i:last-of-type {
+    display: none;
+  }
+}
