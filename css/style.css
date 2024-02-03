@@ -128,7 +128,7 @@ main img {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin: 62px 46px 0;
+  margin: 18px 46px 0;
 }
 .info .card {
   display: flex;
