@@ -116,6 +116,7 @@ main p,
 .skills .holder .text p {
   font-size: 14px;
   font-weight: 300;
+  color: var(--p-color);
 }
 main img {
   height: 180px;
@@ -224,9 +225,6 @@ main img {
 }
 .skills .holder .text {
   min-width: 600px;
-}
-.skills .holder .text P {
-  color: var(--p-color);
 }
 
 .skills .holder .skill {
